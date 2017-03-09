@@ -1,0 +1,41 @@
+
+#bg{
+  background-color: #eee;
+  border:1px solid #999;
+  padding:20px;
+  overflow: hidden;
+  min-width:460px;
+}
+img{
+  width:80px;
+  height:80px;
+  border:1px solid #999;
+}
+#left{
+  float:left;
+  padding:20px;
+  width:200px;
+  background-color: white;
+  border:1px solid #999;
+}
+#left span{
+  float:right;
+  padding:0 20px;
+  font-weight:700;
+}
+#right{
+  float:right;
+  width:120px;
+  background-color: white;
+  border:1px solid #999;
+}
+#right img{
+  margin:20px;
+}
+#center{
+  background-color: white;
+  padding:20px;
+  margin-left:260px;
+  margin-right:140px;
+  border:1px solid #999;
+}
