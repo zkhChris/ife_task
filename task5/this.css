@@ -1,0 +1,147 @@
+html,
+ body {
+   margin:0 auto;
+}
+.contain{
+  display:flex;
+  flex-direction:column;
+  background-color:rgb(220, 220, 220);
+}
+header{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;;
+  align-items:center;
+  background-color: rgb(69, 71, 68);
+}
+header h1{
+  margin-left:10px;
+  flex:1;
+  width:300px;
+  color:white;
+}
+h4,
+h5{
+  color:rgb(120, 120, 120);
+}
+.nav{
+  flex:0 0 auto;
+}
+.nav ul li{
+  float:left;
+}
+ul li{
+  font-size:0.9em;
+  color:#000;
+  margin:0 0.8em;
+}
+li a{
+  color:white;
+  text-decoration:none;
+}
+.box{
+  margin:20px;
+  padding:20px;
+  background-color: white;
+  box-shadow: 10px 10px 5px #888888;
+}
+.box p{
+  font-size:0.9em;
+  line-height:1.4em;
+  text-indent:2em;
+  white-space:pre-line;
+}
+img{
+  width:350px;
+  height:350px;
+}
+#pitbox{
+  overflow: hidden;
+}
+.pit{
+  float:left;
+  border:1px solid rgb(96, 93, 94);
+  padding:15px;
+  margin:10px;
+}
+.pit p{
+  margin-top:-5px;
+  font-size:0.8em;
+  text-indent:0;
+  text-align:center;
+  line-height: 0.6em;
+}
+.pit img{
+  width:120px;
+  height:120px;
+  padding:0;
+}
+ol li{
+  margin:5px 10px;
+}
+#tb1{
+  width:90%;
+  text-align:left;
+  background-color: rgb(207, 208, 207);
+  margin:10px 5%;
+}
+#tb1 th{
+  background-color:rgb(105, 102, 103);
+  color:white;
+  padding:5px;
+  font-weight:700;
+  font-size:0.9em;
+}
+#tb1 td{
+  background-color:white;
+  border:0.5px solid #fff;
+  font-size:0.9em;verti
+  padding:5px;
+}
+#sum td{
+  background-color:rgb(190, 190, 190);
+  font-weight:700;
+  color:black;
+}
+form{
+  padding:10px;
+  margin:10px 2%;
+  width:96%;
+  font-size:0.9em;
+}
+#tb2{
+  width:100%;
+}
+#tb2 td:first-child{
+  text-align: right;
+}
+#sub{
+  height:50px;
+  width:100%;
+  font-size:1.2em;
+  font-weight:700;
+  color:white;
+  background-color: rgb(23, 16, 164);
+  border:1px solid white;
+  border-radius:10px;
+}
+footer{
+  display:flex;
+  height:90px;
+  width:100%;
+  background-color:black;
+  justify-content:center;
+  align-items:center;
+}
+footer p{
+  color:white;
+  font-weight:700;
+  font-size:0.9em;
+}
+#main{
+  display:flex;
+  align-items:flex-start;
+}
+#rightBox{
+  flex:0 0 400px;
+}
