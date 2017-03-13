@@ -91,6 +91,7 @@ function btnHandle() {
   var aqiData = getData();
   aqiData = sortAqiData(aqiData);
   render(aqiData);
+  document.getElementById("sort-btn").onclick="";//点击后事件解除绑定
 }
 
 function init() {
