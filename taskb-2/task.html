@@ -35,6 +35,9 @@ var aqiData = [
     var arr=aqiData.filter(function(temp){
       return temp[1]>60;
     });
+    arr=arr.sort(function(a,b){
+		  return b[1]-a[1];
+	})
     if(arr!=null&&arr!=""){
     for (index in arr){
       var li=document.createElement("li");
