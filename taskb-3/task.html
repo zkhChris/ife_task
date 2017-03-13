@@ -79,7 +79,7 @@ function render(data) {
     var li =document.createElement("li");
     var b=document.createElement("b");
     var nodeB=document.createTextNode(data[i][1]);
-    var node=document.createTextNode(data[i][0]+"：");
+    var node=document.createTextNode("第"+(Number(i+1))+"名："+data[i][0]+"：");
     li.appendChild(node);
     b.appendChild(nodeB);
     li.appendChild(b);
