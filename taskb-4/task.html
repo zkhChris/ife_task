@@ -67,6 +67,7 @@
         var span=document.getElementById("list").getElementsByTagName("span");
         var leng=span.length;
         if(leng>0){
+          alert(span[0].innerText);
           tar.removeChild(span[0]);
         }
       };
@@ -74,16 +75,11 @@
         var span=document.getElementById("list").getElementsByTagName("span");
         var leng=span.length;
         if(leng>0){
+          alert(span[leng-1].innerText);
           tar.removeChild(span[leng-1]);
         }
       };
 
-      var spanList=document.getElementById("list").getElementsByTagName("span");
-      for(var i=0;i<spanList.length;i++){
-        spanList[i].onclick=function(){
-          tar.removeChild(this);
-        };
-      }
     })();
   </script>
 </body>
