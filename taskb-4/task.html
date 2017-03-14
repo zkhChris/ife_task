@@ -36,6 +36,7 @@
         var text=document.createTextNode(v);
         node.appendChild(text);
         tar.appendChild(node).onclick=function(){//新增元素并添加事件
+          alert(this.innerText);
           tar.removeChild(this);
         };
         }
@@ -51,10 +52,12 @@
         var hasElement=span.length;
         if(hasElement>0){
           tar.insertBefore(node,span[0]).onclick=function(){//新增元素并添加事件
+              alert(this.innerText);
               tar.removeChild(this);
             };
         }else{
           tar.appendChild(node).onclick=function(){
+            alert(this.innerText);
             tar.removeChild(this);
           };
         }
