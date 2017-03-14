@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style tyle="css/text">
+    #list{
+      margin-top:30px;
+    }
+    #list span{
+      background-color: red;
+      color:white;
+      margin:10px;
+      padding:10px;
+    }
+  </style>
+</head>
+<body>
+  <input id="input" type="text"><button id="leftIn">左侧入</button><button id="rightIn">右侧入</button><button id="leftOut">左侧出</button><button id="rightOut">右侧出</button>
+  <div id="list">
+
+  </div>
+  <script>
+  (function(){
+      var input=document.getElementById("input");
+      var tar=document.getElementById("list");
+      input.onchange=function(){
+        return input.value;
+      };
+      document.getElementById("rightIn").onclick=function(){
+        var v=input.onchange();
+        if (v!=null&&v!=""){
+        var node=document.createElement("span");
+        var text=document.createTextNode(v);
+        node.appendChild(text);
+        tar.appendChild(node).onclick=function(){//新增元素并添加事件
+          tar.removeChild(this);
+        };
+        }
+      }
+      document.getElementById("leftIn").onclick=function(){
+        var v=input.onchange();
+        if (v!=null&&v!=""){
+        var node=document.createElement("span");
+        var text=document.createTextNode(v);
+        node.appendChild(text);
+        //判断list内有无元素
+        var span=document.getElementById("list").getElementsByTagName("span");
+        var hasElement=span.length;
+        if(hasElement>0){
+          tar.insertBefore(node,span[0]).onclick=function(){//新增元素并添加事件
+              tar.removeChild(this);
+            };
+        }else{
+          tar.appendChild(node).onclick=function(){
+            tar.removeChild(this);
+          };
+        }
+      }
+      };
+      document.getElementById("leftOut").onclick=function(){
+        var span=document.getElementById("list").getElementsByTagName("span");
+        var leng=span.length;
+        if(leng>0){
+          tar.removeChild(span[0]);
+        }
+      };
+      document.getElementById("rightOut").onclick=function(){
+        var span=document.getElementById("list").getElementsByTagName("span");
+        var leng=span.length;
+        if(leng>0){
+          tar.removeChild(span[leng-1]);
+        }
+      };
+
+      var spanList=document.getElementById("list").getElementsByTagName("span");
+      for(var i=0;i<spanList.length;i++){
+        spanList[i].onclick=function(){
+          tar.removeChild(this);
+        };
+      }
+    })();
+  </script>
+</body>
+</html>
